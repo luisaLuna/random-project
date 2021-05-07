@@ -17,6 +17,26 @@ thrContainer.style.alignItems = "center";
 thrContainer.style.flexDirection = "column";
 thrContainer.style.margin = "40px";
 
+// Incrementing counter: 
+
+counters.forEach(counter => {
+    counter.innerText = '0'
+    
+    let updateCounter = () => {
+        let target = Number(counter.getAttribute('data-target'));
+        let c = Number(counter.innerText);
+        let increment = target / 200;
+        if (c < target) {
+            counter.innerText = `${c + increment}`
+            setTimeout(updateCounter, 1);
+        } else {
+            counter.innerText = target;
+         }
+
+    }
+
+    updateCounter()
+})
 
 
 
