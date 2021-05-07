@@ -14,13 +14,13 @@ body {
     height: 100vh;
 }
 
-.counter-container {
-    margin: 40px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
 .counter {
     font-size: 50px;
+} 
+
+
+@media (max-width: 580px) {
+  body {
+    flex-direction: column;
+  }
 }
